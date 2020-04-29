@@ -1,5 +1,155 @@
+/* Defining variables  */
 :root {
-    --main-bg-color: coral;
-    --main-txt-color: blue;
-    --main-padding: 15px;
-  }
+  --backgroundcolor: #A61C5C;
+  --textfieldcolor: #D9D4CC;
+  --headercolor: #D92323;
+  --navbarcolor: #BF2431;
+}
+
+/* Font from file - Helvetica Neue Bold */
+@font-face {
+  font-family: "Helveticaneuebold";
+  src: url(./fonts/Helvetica\ Neu\ Bold.ttf);
+}
+
+/* Fonts from Adobe Fonts - Roboto & Montserrat */
+@import url("https://use.typekit.net/hny6xci.css");
+
+
+/* Fonts' properties */
+
+/* Logo */
+h1 {
+  font-family: Helveticaneuebold, helvetica, sans-serif;
+  font-size: 60px;
+  color:white;
+}
+
+/* White header */
+h2 {
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 16px;
+}
+
+/* Black header */
+h3 {
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+button {
+font-family: montserrat, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 14px;
+color: white;
+text-shadow: 1px 1px black;
+}
+
+/* Links other than navigation bar */
+a {
+font-family: montserrat, sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #D92322;
+text-decoration: underline;
+}
+
+/* Links in navigation bar */
+nav a {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: lowercase;
+  color:black;
+text-decoration: none;
+}
+
+p {
+  font-family: roboto, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 12px;
+}
+
+
+.imagecaptions {
+  font-family: roboto, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 12px;
+  color: #D9D4CC;
+}
+
+
+
+
+
+
+body {
+  display: grid;
+  grid-row-gap: 5px;
+  grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "hd hd hd hd hd hd"
+    ". main  main main  aside ."
+    "footer footer footer footer footer footer";
+  padding: 0em 0em;
+}
+
+nav {
+  grid-area: nav;
+  background-color: var(--navbarcolor);
+
+}
+
+header {
+  grid-area: hd;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+
+}
+
+body {
+  display: grid;
+  grid-row-gap: 5px;
+  grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "hd hd hd hd hd hd"
+    ". main  main main  aside ."
+    "footer footer footer footer footer footer";
+  padding: 0em 0em;
+}
+
+.eventflexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.flexitem {
+  padding: 10px;
+  flex-basis: auto;
+}

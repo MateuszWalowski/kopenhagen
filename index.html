@@ -8,34 +8,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="featuredevent()">
   <nav>
-    <a href="./index.html" target="_blank">Homepage</a>
+    <a href="./index.html">Homepage</a>
     <a href="./newsletter.html" target="_blank">Newsletter</a>
+    <a href="./calendar.html" target="_blank"></a>
+    <a href="./about.html" target="_blank">About us</a>
+    <a href="./list.html" target="_blank">Index</a>
 
-    <a href="./calendar" target="_blank"></a>
 
-    <a href="./about" target="_blank">About us</a>
-
-    <a href="./list" target="_blank">Index</a>
-
- 
   </nav>
 
-
-  <main> </main>
-
-  <template>
-    <h2 class="eventname">eventname</h2>
-    <p>From <span class="startingdate">startingdate</span> to <span class="endingdate">endingdate</span></p>
-   <p class="artists">artists</p>
-
-      <h3 class="category">category</h3>
-      <p class="shortdescription">shortdescription</p>
-      <a href="event.html?event_id="  class="fullSpecs">More information</a>
-      <img src="" alt="">
-  </template>
-
+  <header>
+    <h1>this is a header</h1>
+  </header>
+  <main>
+    <template class="featured">
+      <h2 class="eventname">eventname</h2>
+      <div class="eventflexbox">
+        <div class="flexitem">
+          <img src="" alt="">
+        </div>
+        <div class="flexitem">
+          <p>From <span class="startingdate">startingdate</span> to <span class="endingdate">endingdate</span></p>
+          <p class="artists">artists</p>
+          <h3 class="category">category</h3>
+          <p class="shortdescription">shortdescription</p>
+          <a href="event.html?event_id=" class="fullSpecs">More information</a>
+        </div>
+      </div>
+    </template>
+  </main>
+  <aside>this is a sidebar</aside>
+  <footer>this is a footer</footer>
   <script src="script.js"></script>
 </body>
 
