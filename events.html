@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="allevents()">
+
+  <header>
+    <a href="./index.html">
+      <h1 class="logo">KOPENHAGEN</h1>
+    </a>
+
+    <img  onclick="burgermenu()"  class="burgermenu" src="./images&icons/Hamburger_icon.svg.png" alt="">
+
+
+    <div class=burgermenuopen>
+      <a href="./index.html">Homepage</a>
+      <a href="./events.html">Events</a>
+      <a href="./contact.html" >Contact us</a>
+    </div>
+
+
+  </header>
+  <main>
+
+    <div class="flexallevents">
+
+      <div>
+        Find events
+      </div>
+      <div class="eventstypes">
+        <div style="cursor: pointer;" onclick="Showupcoming()">Upcoming</div>
+
+        <div  style="cursor: pointer;" onclick="Showcurrent()">Current</div>
+
+        <div style="cursor: pointer;" onclick="Showarchive()">Archive</div>
+      </div>
+    </div>
+
+
+    <div class="Upcoming">
+
+      <template class="upcomingeventstemplate">
+        <div class="alleventflex">
+        <p class="eventcategory"></p>
+       <a href="artist.html"><p class="artist"></p></a> 
+        <p class="eventname"></p>
+        <p class="location">location </p>
+
+        <p> <span class="startingdate">startingdate</span> - <span class="endingdate">endingdate</span></p>
+      </div> </template>
+
+    </div>
+    <div class="Current">
+      <template class="currenteventstemplate">
+        <div class="alleventflex">
+        <p class="eventcategory"></p>
+        <a href="artist.html">  <p class="artist"></p></a> 
+        <p class="eventname"></p>
+        <p class="location">location </p>
+
+        <p> <span class="startingdate">startingdate</span> - <span class="endingdate">endingdate</span></p>
+      </div> </template>
+    </div>
+    <div class="Archive">
+      <template class="archiveeventstemplate">
+        <div class="alleventflex">
+        <p class="eventcategory"></p>
+        <a href="artist.html">   <p class="artist"></p></a> 
+        <p class="eventname"></p>
+        <p class="location">location </p>
+
+        <p> <span class="startingdate">startingdate</span> - <span class="endingdate">endingdate</span></p>
+      </div> </template>
+    </div>
+    <div class="sidebar">
+      <a href="./events.html"><img src="./images&icons/black_filtericon.png" alt="Filter events" title="Filter events"> </a>
+      <a href="./contact.html">  <img src="./images&icons/black_kontakticon.png" alt="Contact us" title="Contact us"> </a>
+      <a href="https://www.facebook.com/kopenhagen.dk" target="_blank"> <img src="./images&icons/black_facebooklogo.png" alt="Visit our Facebook" title="Visit our Facebook"> </a>
+      <a href="https://www.instagram.com/kopenhagendk/" target="_blank">  <img src="./images&icons/black_instagramlogo.png" alt="Visit our Instagram" title="Visit our Instagram"> </a>
+     
+    </div>
+
+
+
+
+  </main>
+
+
+</body>
+
+</html>

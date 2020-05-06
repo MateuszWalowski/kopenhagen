@@ -1,155 +1,183 @@
+/* Resetting browser's default CSS */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 1;
+  overflow-x: hidden;
+  background: url(./images&icons/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
 /* Defining variables  */
 :root {
   --backgroundcolor: #A61C5C;
-  --textfieldcolor: #D9D4CC;
+  --eventinfocolor: #D9D4CC;
   --headercolor: #D92323;
   --navbarcolor: #BF2431;
-}
-
-/* Font from file - Helvetica Neue Bold */
-@font-face {
-  font-family: "Helveticaneuebold";
-  src: url(./fonts/Helvetica\ Neu\ Bold.ttf);
-}
-
-/* Fonts from Adobe Fonts - Roboto & Montserrat */
-@import url("https://use.typekit.net/hny6xci.css");
-
-
-/* Fonts' properties */
-
-/* Logo */
-h1 {
-  font-family: Helveticaneuebold, helvetica, sans-serif;
-  font-size: 60px;
-  color:white;
-}
-
-/* White header */
-h2 {
-  font-family: montserrat, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
-  font-size: 16px;
-}
-
-/* Black header */
-h3 {
-  font-family: montserrat, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: black;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-button {
-font-family: montserrat, sans-serif;
-font-weight: 500;
-font-style: normal;
-font-size: 14px;
-color: white;
-text-shadow: 1px 1px black;
-}
-
-/* Links other than navigation bar */
-a {
-font-family: montserrat, sans-serif;
-font-weight: 500;
-font-style: normal;
-color: #D92322;
-text-decoration: underline;
-}
-
-/* Links in navigation bar */
-nav a {
-  font-family: montserrat, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: lowercase;
-  color:black;
-text-decoration: none;
-}
-
-p {
-  font-family: roboto, sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 12px;
+  --transparentbackground: rgba(255, 255, 255, 0.2);
+  --sidebarcolor: #D86370;
 }
 
 
-.imagecaptions {
-  font-family: roboto, sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 12px;
-  color: #D9D4CC;
+.burgermenuopen {
+  float: right;
+    display:none;
+    flex-direction: column;
+    background-color: var(--transparentbackground);
+    margin: 1em;
+    margin-right: 0em;
+
+  }
+
+
+  .burgermenuopen a {
+    margin: 1vh;
+  }
+
+.burgermenu {
+float: right;
+  margin: 1em;
+  margin-left: 0em;
+
+  height: 50%;
 }
 
-
-
-
-
+.logo {
+  position: relative;
+  margin: 1em;
+float: left;
+}
 
 body {
   display: grid;
-  grid-row-gap: 5px;
-  grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10vh auto;
   grid-template-areas:
-    "nav nav nav nav nav nav"
-    "hd hd hd hd hd hd"
-    ". main  main main  aside ."
-    "footer footer footer footer footer footer";
+    "hd hd hd  "
+    "main main  main    ";
   padding: 0em 0em;
 }
 
-nav {
-  grid-area: nav;
-  background-color: var(--navbarcolor);
-
-}
 
 header {
   grid-area: hd;
+ 
 }
+
+
 
 main {
   grid-area: main;
 }
 
-aside {
-  grid-area: aside;
-}
 
-footer {
-  grid-area: footer;
-
-}
-
-body {
-  display: grid;
-  grid-row-gap: 5px;
-  grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "nav nav nav nav nav nav"
-    "hd hd hd hd hd hd"
-    ". main  main main  aside ."
-    "footer footer footer footer footer footer";
-  padding: 0em 0em;
-}
-
-.eventflexbox {
+.homepageflex {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.flexitem {
-  padding: 10px;
-  flex-basis: auto;
+.homepageflex div {
+    margin: 1em;
 }
+
+
+
+* {
+  font-family: Helvetica, sans-serif
+}
+
+.eventgrid {
+  border-radius: 25px;
+  padding: 1em;
+  margin: 1em;
+
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  background-color: var(--transparentbackground);
+  border-radius: 25px;
+}
+
+.signupform {
+  display: flex;
+  height: 2em;
+}
+
+.newsletter p {
+  font-size: 10px;
+}
+
+.signupform .signuptextfield {
+  border-radius: 25px 0px 0px 25px;
+}
+
+
+.signupform .signupbutton {
+  border-radius: 0px 25px 25px 0px;
+  background-color: red;
+}
+
+.support {
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.sidebar {
+  position: fixed;
+  background-color: var(--sidebarcolor);
+  right:1px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.sidebar img  {
+padding-top: 1vh;
+padding-bottom: 1vh;
+padding-left: 1vw;
+padding-right: 1vw;
+width: 50%;
+}
+
+.flexallevents {
+  position: relative;
+  top: 20vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+
+
+}
+
+.eventstypes{
+  display: flex;
+  flex-direction: column;
+}
+
+.Upcoming, .Current, .Archive {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  top: 20vh
+
+}
+
