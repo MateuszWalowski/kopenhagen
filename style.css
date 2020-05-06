@@ -47,7 +47,7 @@ float: right;
 
 .logo {
   position: relative;
-  margin: 1em;
+  margin: .5em;
 float: left;
 }
 
@@ -81,8 +81,11 @@ main {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-between;
   align-items: stretch;
+    width: 90vw;
+    margin-right: 2em;
+    margin-left: 2em;
 }
 
 .homepageflex div {
@@ -96,9 +99,17 @@ main {
 }
 
 .eventgrid {
+    min-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   border-radius: 25px;
   padding: 1em;
   margin: 1em;
+ background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 
 }
 
@@ -126,11 +137,16 @@ main {
 .signupform .signupbutton {
   border-radius: 0px 25px 25px 0px;
   background-color: red;
+    font-weight: bold;
 }
 
 .support {
   text-transform: uppercase;
   color: white;
+    font-weight: 700;
+    font-size: 3em;
+    padding-left: 1em;
+padding-right: 1em;
 }
 
 
@@ -181,3 +197,11 @@ width: 50%;
 
 }
 
+
+.thankyou {
+    line-height: 1.5em;
+    opacity: 65%;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
